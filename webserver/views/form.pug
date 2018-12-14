@@ -1,0 +1,17 @@
+extends layout
+
+block content
+  .main.container
+    .row
+      .col-md-6.col-md-offset-3
+        h1.display-4.m-b-2 Enregistrer un patient
+
+        // register form
+        form(method='POST' action='/patients/create')
+          div.form-group
+            label(for='nom') Nom:
+            input#name.form-control(type='text', placeholder='Prénom et nom' name='nom')
+          div.form-group
+            label(for='contact') Contact:
+            input#contact.form-control(type='text', placeholder='Informations de contact' name='contact')
+          button.btn.btn-primary(type='submit') S'enregistrer
